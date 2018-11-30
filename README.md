@@ -116,8 +116,11 @@ r <- httr::GET("https://qrng.anu.edu.au/ran_hex.php")
  [1] ".GlobalEnv"        "package:httr"      "tools:rstudio"     "package:stats"    
  [5] "package:graphics"  "package:grDevices" "package:utils"     "package:datasets" 
  [9] "package:methods"   "Autoloads"         "package:base"
-```
 
+ ## Reference a specific package using ::
+ ##
+ httr::GET(...)
+```
 
 ## File Input / Output
 
@@ -138,7 +141,7 @@ lines(x, y, type="l")
 ```
 
 <p align="center">
-    <img src="images/plot_passengers.png" alt="drawing" width="400"/> 
+    <img src="images/plot_passengers.png" alt="drawing" width="600"/> 
 </p>
 
 ## Forecasting
@@ -154,8 +157,9 @@ data$passengers %>%
   residuals() %>%
   forecast::ggtsdisplay()
 ```
-<img src="images/plot_sarima.png" alt="drawing" width="400"/> 
-
+<p align="center">
+  <img src="images/plot_sarima.png" alt="drawing" width="600"/> 
+</p>
 
 ```r
 ## Auto ARIMA
@@ -166,7 +170,9 @@ data$passengers %>%
   forecast::ggtsdisplay()
 
 ```
-<img src="images/plot_auto_arima.png" alt="drawing" width="400" border="5" /> 
+<p align="center">
+  <img src="images/plot_auto_arima.png" alt="drawing" width="600" border="5" />
+</p>
 
 ## Miscellaneous
 
