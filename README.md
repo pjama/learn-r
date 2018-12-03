@@ -133,11 +133,13 @@ r <- httr::GET("https://qrng.anu.edu.au/ran_hex.php")
 ## Plotting
 
 ```r
-x=data$Month
-y=data$passengers
-heading="Passengers vs. Time"
-plot(x, y, type="n", main=heading)
-lines(x, y, type="l") 
+## https://www.tidyverse.org
+##
+install.packages('tidyverse')
+
+ggplot2::ggplot(data=data.frame(data), ggplot2::aes(x=Month, y=passengers, group=1)) +
+  ggplot2::geom_line()+
+  ggplot2::geom_point()
 ```
 
 <p align="center">
